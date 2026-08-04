@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Demir</title>
+    <title>Furkan Demir | Tech Portfolio</title>
     <!-- Tarayıcı Sekmesi İçin Kendi Logon -->
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome İkonları -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics Takip Kodu -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9662RC671B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9662RC671B');
+
+      // Buton Tıklama Takip Fonksiyonu
+      function trackClick(buttonName) {
+        gtag('event', 'button_click', {
+          'button_name': buttonName
+        });
+      }
+    </script>
 </head>
 <body>
 
@@ -34,13 +51,13 @@
 
         <!-- SOSYAL MEDYA / BAĞLANTI BUTONLARI -->
         <div class="links-container">
-            <a href="https://github.com/furkndmr" target="_blank" class="link-button">
+            <a href="https://github.com/furkndmr" target="_blank" class="link-button" onclick="trackClick('GitHub')">
                 <i class="fa-brands fa-github"></i> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/frkndmrengineer/" target="_blank" class="link-button">
+            <a href="https://www.linkedin.com/in/frkndmrengineer/" target="_blank" class="link-button" onclick="trackClick('LinkedIn')">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
-            <a href="mailto:furkandmr.engineer@gmail.com" class="link-button">
+            <a href="mailto:furkndmr.engineer@gmail.com" class="link-button" onclick="trackClick('Mail')">
                 <i class="fa-solid fa-envelope"></i> Mail
             </a>
         </div>
